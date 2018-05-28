@@ -145,7 +145,7 @@ function html2json(html, bindName) {
             }
 
             //对img添加额外数据
-            if (node.tag === 'img') {
+            if (node.tag === 'img' && typeof (node.attr) != "undefined") {
                 node.imgIndex = results.images.length;
                 var imgUrl = node.attr.src;
                 if (imgUrl[0] == '') {
